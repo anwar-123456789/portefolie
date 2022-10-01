@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,500&display=swap');
+html {
+    scroll-behavior: smooth;
+  }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    max-width: 1174px;
+    margin: 0 auto;
+}
+.clearfix{
+    clear: both;
+}
+/* ================= start header ================= */
+header {
+    background: red;
+    /* background-image: linear-gradient(to bottom right, #9e8484, #0f0f0d,#42e933); */
+    border-bottom: 6px solid black;
+}
+header .logo-header {
+    float: left;
+    height: 70px;
+    width: 100px;
+}
+header .logo-header img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+header nav {
+    float: right;
+    margin-top: 21px;
+}
+header nav ul {
+    list-style: none;
+}
+header nav ul li {
+    display: inline-block;
+    transition: all 2s;
+}
+header nav ul li a {
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    text-decoration: none;
+    transition: all 2s;
+}
+header nav ul li a:hover {
+    color: rgb(0, 0, 0);
+    border-bottom: 1px solid black;
+}
+/* ================= end header ================= */
+
+/* ================= start section a propos ================= */
+section.apropos {
+    padding: 50px 0;
+    overflow: hidden;
+}
+section.apropos h2,section.travail h4,section.cv h3,section.formulaire h3 {
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    display: table;
+    padding-left: 20px;
+    margin: 0 auto 50px;
+    padding-bottom:17px;
+    font-size: 25px;
+}
+section.apropos h2:after,section.travail h4:after,section.cv h3:after,section.formulaire h3:after {
+    color: red;
+    content: 'A';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: inherit;
+    right: 0;
+}
+/* section.apropos h2::before{
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    top: inherit;
+    right: inherit;
+    background-color: red;
+} */
+ section.apropos h2::before,section.travail h4:before,section.cv h3:before,section.formulaire h3:before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    left: 50%;
+    bottom: 0;
+    top: inherit;
+    right: inherit;
+    background-color: red;
+    transform: translateX(-50%);
+    transition: all 2s;
+}
+
+/* section.apropos h2::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 50%;
+    bottom: 0;
+    top: inherit;
+    right: inherit;
+    background-color: red;
+    transform: translateX(-50%);
+    transition: all 2s;
+}
+section.apropos h2:hover::before {
+    width: 100%;
+} */
+section.apropos .description {
+    float: left;
+    width: 50%;
+    height: 400px;
+    background: #dcdcdc3d;
+    padding: 40px;
+    border-radius: 40px;
+}
+section.apropos .content-img {
+    float: right;
+    width: 50%;
+    border-radius: 40px;
+    top: 40px;
+    right: 43px;
+    position: relative;
+}
+section.apropos .content-img img {
+    width: 100%;
+    border-radius: 40px;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%),0 2px 5px 0 rgb(0 0 0 / 5%),0 2px 5px 0 rgb(0 0 0 / 5%),0 2px 5px 0 rgb(0 0 0 / 5%);
+}
+
+/* ================= end section a propos ================= */
+/* ================== start setion travail ======================= */
+section.travail {
+    padding: 50px 0;
+    background: #8080800a;
+}
+section.travail table {
+    width: 100%;
+}
+section.travail table thead tr,section.travail table tfoot tr {
+    background: red;
+    color: white;
+}
+section.travail table tr th, section.travail table tr td {
+    text-align: left;
+    padding: 10px;
+}
+section.travail table tbody tr:nth-child(even){
+    background: gray;
+    color: white;
+}
+section.travail table tbody tr:nth-child(odd){
+    background: #dadada;
+    color: white;
+}
+section.travail table tr{
+   transition: all 2s;
+}
+section.travail table tr:hover{
+    opacity: .4;
+}
+/* ================== end setion travail ======================= */
+
+/* ================== start section cv ======================= */
+section.cv {
+    padding: 50px 0;
+
+}
+section.cv p ,section.formulaire p{
+    font-size: 19px;
+    line-height: 35px;
+    text-align: center;
+}
+section.cv .iframe{
+    text-align: center;
+}
+section.cv .iframe {
+    text-align: center;
+    padding: 10px;
+    border:2px solid #eaeaea;
+    display: table;
+    margin: 40px auto 0;
+}
+section.cv .audio {
+    display: table;
+    text-align: center;
+    margin: 28px auto;
+    padding: 7px 8px 3px;
+    border: 2px solid #eaeaea;
+    border-radius: 40px;
+}
+/* ================== end section cv ======================= */
+
+/* ================== start section formuaire ======================= */
+section.formulaire {
+    padding: 50px 0;
+    background: #8080800a;
+    overflow: hidden;
+}
+section.formulaire form label {
+    display: block;
+    font-size: 18px;
+    color: gray;
+    margin-bottom: 10px;
+}
+section.formulaire form {
+    width: 50%;
+    float: left;
+    padding: 20px;
+    margin-top: 40px;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 5px 0 rgb(0 0 0 / 5%);
+}
+section.formulaire form input {
+    width: 100%;
+    height: 45px;
+    padding: 10px;
+    outline: none;
+    border: 2px solid gray;
+    margin: 5px 0;
+}
+section.formulaire form input[type="submit"] {
+    background: red;
+    outline: none;
+    border: 2px solid red;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+}
+section.formulaire .maps {
+    float: right;
+    width: 44%;
+    margin-top: 40px;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 5px 0 rgb(0 0 0 / 5%);
+    height: 267px;
+    margin-right: 20px;
+}
+section.formulaire .maps iframe {
+    height: 100%;
+    width: 100%;
+}
+/* ================== end section formuaire ======================= */
+
+/* ================== start footer ======================= */
+footer {
+    padding: 50px 0;
+    border-top: 6px solid red;
+    background: black;
+    color: white;
+}
+footer .content-footer {
+    overflow: hidden;
+}
+footer .content-footer > div:first-child {
+width: 33%;
+float: left;
+}
+footer .content-footer > div:nth-child(2) {
+    width: 33%;
+    float: left;
+    }
+footer .content-footer > div:last-child {
+    width: 33%;
+    float: left;
+}
+
+
+footer .content-footer > div:first-child h5,footer .content-footer > div:nth-child(2) h5,footer .content-footer > div:last-child h5 {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: red;
+}
+
+
+
+footer .content-footer > div:first-child ul,footer .content-footer > div:nth-child(2) ul {
+list-style: none !important;
+}
+    
+footer .content-footer > div:first-child ul li a,footer .content-footer > div:first-child ul li,footer .content-footer > div:nth-child(2) ul li a,footer .content-footer > div:nth-child(2) ul li {
+color: white;
+font-size: 17px;
+text-decoration: none;
+transition: all 2s;
+}
+footer .content-footer > div:first-child ul li:hover a,footer .content-footer > div:first-child ul li:hover,footer .content-footer > div:nth-child(2) ul li:hover a,footer .content-footer > div:nth-child(2) ul li:hover {
+color: red;
+position: relative;
+left: 5px;
+transition: all 5s;
+}
+
+footer .content-footer > div:last-child p {
+font-size: 20px;
+line-height: 24px;
+}
+footer .content-footer > div:last-child form input {
+    width: 100%;
+    margin: 10px 0;
+    height: 45px;
+    outline: none;
+    padding: 10px;
+}
+footer .content-footer > div:last-child form 
+ input[type="button"] {
+    color: red;
+    font-size: 20px;
+    font-weight: 700;
+}
+footer .footer-networks > div:first-child span {
+    float: left;
+}
+footer .footer-networks > div:first-child i {
+    float: right;
+    font-size: 25px;
+    margin-left: 20px;
+}
+footer .footer-networks > div:first-child i:hover {
+    color: red;
+}
+footer .footer-networks {
+    margin-top: 23px;
+}
+/* ================== end footer ======================= */
